@@ -56,6 +56,13 @@
             height: 250px;
             object-fit: cover;
             display: block;
+            background-color: #f0f0f0;
+        }
+
+        .image-card img[src=""] {
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="%23ddd"/><text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="%23999">Нет изображения</text></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         .image-info {
@@ -181,5 +188,23 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Проверяем загрузку изображений
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach((img, index) => {
+                img.onerror = function() {
+                    console.error(`Не удалось загрузить изображение: ${this.src}`);
+                    this.style.backgroundColor = '#f0f0f0';
+                    this.alt = 'Изображение не найдено';
+                };
+                
+                img.onload = function() {
+                    console.log(`Изображение загружено: ${this.src}`);
+                };
+            });
+        });
+    </script>
 </body>
 </html>
