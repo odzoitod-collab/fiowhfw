@@ -1,0 +1,16 @@
+{
+  "name": "gallery-stages",
+  "version": "1.0.0",
+  "description": "Галерея этапов - статический сайт с изображениями",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "build": "echo 'No build step required for static site'"
+  },
+  "keywords": ["gallery", "stages", "static", "html"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.0.0"
+  }
+}
