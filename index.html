@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея этапов</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .image-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .stage-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .stage-number {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Галерея этапов</h1>
+        <div class="gallery">
+            <div class="image-card">
+                <img src="public/stages/stage1.jpg" alt="Этап 1">
+                <div class="image-info">
+                    <div class="stage-title">Этап 1</div>
+                    <div class="stage-number">Первый этап</div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="public/stages/stage2.jpg" alt="Этап 2">
+                <div class="image-info">
+                    <div class="stage-title">Этап 2</div>
+                    <div class="stage-number">Второй этап</div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="public/stages/stage3.jpg" alt="Этап 3">
+                <div class="image-info">
+                    <div class="stage-title">Этап 3</div>
+                    <div class="stage-number">Третий этап</div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="public/stages/stage4.jpg" alt="Этап 4">
+                <div class="image-info">
+                    <div class="stage-title">Этап 4</div>
+                    <div class="stage-number">Четвертый этап</div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="public/stages/stage5.jpg" alt="Этап 5">
+                <div class="image-info">
+                    <div class="stage-title">Этап 5</div>
+                    <div class="stage-number">Пятый этап</div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="public/stages/stage6.jpg" alt="Этап 6">
+                <div class="image-info">
+                    <div class="stage-title">Этап 6</div>
+                    <div class="stage-number">Шестой этап</div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="public/stages/stage7.jpg" alt="Этап 7">
+                <div class="image-info">
+                    <div class="stage-title">Этап 7</div>
+                    <div class="stage-number">Седьмой этап</div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="public/stages/stage8.jpg" alt="Этап 8">
+                <div class="image-info">
+                    <div class="stage-title">Этап 8</div>
+                    <div class="stage-number">Восьмой этап</div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="public/stages/stage9.jpg" alt="Этап 9">
+                <div class="image-info">
+                    <div class="stage-title">Этап 9</div>
+                    <div class="stage-number">Девятый этап</div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="public/stages/stage10.jpg" alt="Этап 10">
+                <div class="image-info">
+                    <div class="stage-title">Этап 10</div>
+                    <div class="stage-number">Десятый этап</div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="public/stages/stage11.jpg" alt="Этап 11">
+                <div class="image-info">
+                    <div class="stage-title">Этап 11</div>
+                    <div class="stage-number">Одиннадцатый этап</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
